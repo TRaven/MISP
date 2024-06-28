@@ -2,7 +2,7 @@
 #It does this by pulling links with a specified TAG from MISP and querying it, creating a hash, and comparing it to a pre-existing hash. If there's a change, a MISP event will be created.
 #You will need a text file with an empty dictionary titled MISP_Monitor_Website_options.txt for it to run.
 #Written By: https://github.com/TRaven/
-#Version: 5
+#Version: 1
 
 import time, hashlib, re, uuid, os, json, requests
 from urllib.request import urlopen, Request
