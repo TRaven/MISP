@@ -14,7 +14,7 @@ misp_url= "[YOUR MISP URL]"
 # The MISP API key
 misp_key = "[YOUR MISP API KEY]"
 # The Tag that will be pulled
-misp_attribute_tag = "YOUR RELEVANT TAG"
+misp_attribute_tag = "[YOUR RELEVANT TAG]"
 
 def get_hash():
     print("GETTING THE HASH")
@@ -62,7 +62,7 @@ def misp_work():
 
 if __name__ == '__main__':
     # First let's pull the 
-    payload = {"type":"link", "tags":"BCST Monitored URL"}
+    payload = {"type":"link", "tags":misp_attribute_tag}
     headers = {"Authorization" : misp_key, "Content-type" : "application/json"}
     response = requests.post(misp_url + "/attributes/restSearch", headers=headers, json=payload, verify=False)
     the_data = json.loads(response.text)["response"]["Attribute"]
