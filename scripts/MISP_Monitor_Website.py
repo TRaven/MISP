@@ -4,7 +4,7 @@
 #Written By: https://github.com/TRaven/
 #Version: 1
 
-import time, hashlib, re, uuid, os, json, requests
+import hashlib, json, requests
 from urllib.request import urlopen, Request
 from pymisp import PyMISP
 from pymisp import MISPEvent
